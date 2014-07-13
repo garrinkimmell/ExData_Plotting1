@@ -9,5 +9,6 @@ interesting <- data[data$Date %in% targets,]
 interesting$Global_active_power <- sapply(interesting$Global_active_power, as.numeric)
 
 # Generate Plot 1
+png("figure/plot1.png")
 hist(interesting$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
-
+dev.off()
